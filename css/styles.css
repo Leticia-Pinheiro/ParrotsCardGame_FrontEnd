@@ -1,4 +1,7 @@
 
+.container{
+    width: 100%;
+}
 .topo{
     width: 100%;
     height: 100px;
@@ -28,9 +31,62 @@ ul{
     border-radius: 5px;
     border: 1px solid #99CEA8;    
     margin: 17px;
-    background-image: url("../images/front.png");
+    /* background-image: url("../images/front.png"); */
     background-size: 100px;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;  */
     background-position: center;
     background-color: #A7E9AF;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
 }
+
+.carta:hover{
+    cursor: pointer;
+}
+
+/* .carta:active{
+    transform: scale(0.97);
+    transition: transform 0.2s;
+} */
+
+/* .carta.virada{
+    transform: rotateY(180deg);
+} */
+
+
+
+.frente, .verso{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;    
+}
+
+.verso {
+    transform: rotateY(180deg);
+  }
+
+  .carta:active .verso {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+    transform: rotateY(0deg);
+  }
+
+  .carta:active .frente {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+    transform: rotateY(-180deg);
+  }
+
+
+
+
