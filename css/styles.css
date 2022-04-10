@@ -2,7 +2,7 @@
 .topo{
     width: 100%;
     height: 100px;
-    background-color: blue;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,4 +13,24 @@
     color: #75B79E;
     font-family: 'Roboto';
     font-weight: 700;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carta{
+    width: 117px;
+    height: 146px;
+    border-radius: 5px;
+    border: 1px solid #99CEA8;    
+    margin: 17px;
+    background-image: url("../images/front.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #A7E9AF;
 }

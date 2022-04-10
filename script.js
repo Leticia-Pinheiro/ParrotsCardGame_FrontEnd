@@ -1,6 +1,7 @@
 const lista = document.querySelector("ul")
 const cartas = []
 let contador = 0;
+let ncartas;
 
     do {        
          ncartas = prompt ("Com quantas cartas você deseja jogar?")
@@ -8,13 +9,18 @@ let contador = 0;
 
     if ((ncartas % 2) === 0 && ncartas >= 4 && ncartas <=14){
         while (contador < ncartas){
-            cartas.push('OLÁ')
-            lista.innerHTML += `<li> ${cartas[contador]} </li>`
+            cartas.push('')
+            lista.innerHTML += `
+            <li> 
+                <div class="carta"> 
+                    ${cartas[contador]} 
+                </div> 
+            </li>`
             contador++;
         }
     }
 
-    
+
 
 
 
