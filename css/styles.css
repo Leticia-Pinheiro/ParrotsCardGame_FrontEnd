@@ -7,6 +7,7 @@
     height: 100px;
     
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -51,14 +52,9 @@ ul{
     cursor: pointer;
 }
 
-/* .carta:active{
-    transform: scale(0.97);
-    transition: transform 0.2s;
-} */
-
-/* .carta.virada{
+.carta.selecionada{
     transform: rotateY(180deg);
-} */
+}
 
 
 
@@ -75,7 +71,7 @@ ul{
     transform: rotateY(180deg);
   }
 
-  .carta:active .verso {
+  /* .carta:active .verso {
     transform: scale(0.97);
     transition: transform 0.2s;
     transform: rotateY(0deg);
@@ -84,9 +80,7 @@ ul{
   .carta:active .frente {
     transform: scale(0.97);
     transition: transform 0.2s;
-    transform: rotateY(-180deg);
-  }
-
-
+    transform: rotateY(180deg);
+  } */
 
 

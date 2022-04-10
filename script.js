@@ -4,8 +4,8 @@ let contador = 0;
 let ncartas;
 let parrot;
 
-let primeiraCarta, segundaCarta;
-
+let carta1, carta2;
+let par;
 
 function imagem(){
     if (contador === 0 || contador === 1){
@@ -32,6 +32,9 @@ function imagem(){
 }
 
 
+
+
+
     do {        
          ncartas = prompt ("Com quantas cartas você deseja jogar?")
     }while((ncartas  % 2) === 1 || ncartas < 4 || ncartas > 14)
@@ -41,7 +44,7 @@ function imagem(){
             imagem()
             cartas.push(`
             <li> 
-                <div class="carta">
+                <div class="carta" onclick="selecionarCarta(this)">
                 <img class = "frente" src="images/front.png" alt="">
                 <img class = "verso" src=${parrot} alt=""></img>
                 </div>
@@ -51,8 +54,18 @@ function imagem(){
         }
     }
 
-    
-    
+
+function selecionarCarta(primeiraCarta){
+    carta1 = primeiraCarta.innerHTML;
+    // carta2 = segundaCarta.innerHTML;
+
+    const cartaSelecionada = document.querySelector(".selecionada");
+    // carta2 = cartaSelecionada.innerHTML;
+
+    if (cartaSelecionada === null){
+        primeiraCarta.classList.add("selecionada")    
+    }
+}
 
 
 
@@ -62,12 +75,5 @@ function imagem(){
 
 
 
-    
-//     while ((ncartas % 2) !== 0){
-//         alert ("nao")
-//         let ncartas = prompt("Com quantas cartas você deseja jogar?")
-//     }
-//     if((ncartas % 2) === 0){
-//         alert("ok")
-//     }
+
 
